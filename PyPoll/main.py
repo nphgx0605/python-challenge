@@ -36,19 +36,25 @@ for candidate in candidates:
         winner = candidate
 
 # Print analysis
-results_summary = (
-    f"Election Results\n"
-    f"-------------------------\n"
-    f"Total Votes: {total_votes}\n"
-    f"-------------------------\n"
-    f"{results}"
-    f"-------------------------\n"
-    f"Winner: {winner}\n"
-    f"-------------------------\n"
-)
-print(results_summary)
+print("Election Results")
+print("-------------------------")
+print(f"Total Votes: {total_votes}")
+print("-------------------------")
+print(results, end="")
+print("-------------------------")
+print(f"Winner: {winner}")
+print("-------------------------")
+
+
 
 # Save the results to a text file
 output_path = os.path.join('/Users/phuongnguyen/python-challenge/PyPoll/analysis', 'election_results.txt')
-with open(output_path, 'w') as textfile:
-    textfile.write(results_summary)
+with open(output_path, "w") as txt_file:
+    txt_file.write("Election Results\n")
+    txt_file.write("-------------------------\n")
+    txt_file.write(f"Total Votes: {total_votes}\n")
+    txt_file.write("-------------------------\n")
+    txt_file.write(results)
+    txt_file.write("-------------------------\n")
+    txt_file.write(f"Winner: {winner}\n")
+    txt_file.write("-------------------------\n")

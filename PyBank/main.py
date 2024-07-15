@@ -40,20 +40,23 @@ greatest_decrease = min(changes)
 greatest_increase_month = months[changes.index(greatest_increase)]
 greatest_decrease_month = months[changes.index(greatest_decrease)]
 
-# Print the analysis to the terminal
-results = (
-    f"Financial Analysis\n"
-    f"----------------------------\n"
-    f"Total Months: {total_months}\n"
-    f"Total: ${net_total}\n"
-    f"Average Change: ${average_change:.2f}\n"
-    f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})\n"
-    f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})\n"
-)
-print(results)
+# Displaying results
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {total_months}")
+print(f"Total: ${net_total}")
+print(f"Average Change: ${average_change:.2f}")
+print(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})")
+print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})")
 
 # Save the results to a text file
 output_path = "/Users/phuongnguyen/python-challenge/PyBank/analysis/financial_analysis.txt"
-with open(output_path, 'w') as textfile:
-    textfile.write(results)
+with open(output_path, "w") as txt_file:
+    txt_file.write("Financial Analysis\n")
+    txt_file.write("----------------------------\n")
+    txt_file.write(f"Total Months: {total_months}\n")
+    txt_file.write(f"Total: ${net_total}\n")
+    txt_file.write(f"Average Change: ${average_change:.2f}\n")
+    txt_file.write(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})\n")
+    txt_file.write(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})\n")
 
