@@ -2,7 +2,7 @@ import csv
 import os
 
 # Path to the CSV file
-csv_path = "/Users/phuongnguyen/python-challenge/PyBank/Resources/budget_data.csv"
+csv_path = os.path.join("/Users/phuongnguyen/python-challenge/PyBank/Resources/budget_data.csv")
 
 
 # Initialize variables
